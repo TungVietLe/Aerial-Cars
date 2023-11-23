@@ -1,11 +1,43 @@
 from ultralytics import YOLO
+import cv2
 
-# Load a model
 
-model = YOLO("yolov8n.pt")  # load a pretrained model (recommended for training)
+# load yolov8 model
+model = YOLO("best.pt")
+model.fuse()
 
-# Use the model
-model.train(data="data.yaml", epochs=7)  # train the model
-metrics = model.val()  # evaluate model performance on the validation set
-#results = model("https://ultralytics.com/images/bus.jpg")  # predict on an image
-path = model.export(format="onnx")  # export the model to ONNX format
+# cap = cv2.imread("dining.png")
+
+# result = model.track(image, persist=True)
+
+# image = result[0].plot()
+
+# cv2.imshow("Window name", image)
+# cv2.waitKey(0)
+
+# load video
+cap = cv2.VideoCapture("tophighway.mp4")
+
+ret = True
+# read frames
+while ret:
+    ret, frame = cap.read()
+
+    if ret:
+        # detect objects
+        # track objects
+        frame = cv2.resize(frame, (0, 0), fx=0.5, fy=0.5)
+        results = model.predict(frame)
+
+        # plot results
+        # cv2.rectangle
+        # cv2.putText
+        frame_ = results[0].plot()
+
+        # visualize
+        cv2.imshow("frame", frame_)
+        if cv2.waitKey(0) == ord("q"):
+            break
+
+cap.release()
+cv2.destroyAllWindows()
