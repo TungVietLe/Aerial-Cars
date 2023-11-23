@@ -22,12 +22,12 @@ ret = True
 # read frames
 while ret:
     ret, frame = cap.read()
+    frame = frame[200:900, :]  # roi
 
     if ret:
-        frame = frame[200:900, :]  # roi
         # detect objects
         # track objects
-        results = model.track(frame, persist=True)
+        results = model.track(frame, persist=True, classes=[0])
 
         # plot results
         # cv2.rectangle
