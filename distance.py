@@ -55,7 +55,7 @@ class DistanceManager:
                         cv2.FONT_HERSHEY_PLAIN,
                         2,
                         (255, 255, 255),
-                        1,
+                        3,
                     )
 
                 # Replace previous frame with this frame
