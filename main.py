@@ -1,22 +1,17 @@
 from ultralytics import YOLO
 import cv2
+from distance import DistanceManager
 
 
 # load yolov8 model
 model = YOLO("best_train4.pt")
-
-
-# cap = cv2.imread("dining.png")
-
-# result = model.track(image, persist=True)
-
-# image = result[0].plot()
-
-# cv2.imshow("Window name", image)
-# cv2.waitKey(0)
+distanceMana = DistanceManager()
 
 # load video
 cap = cv2.VideoCapture("tophighway.mp4")
+fps = cap.get(cv2.CAP_PROP_FPS)
+print(f"FPS: {fps}")
+
 
 ret = True
 # read frames
@@ -28,15 +23,18 @@ while ret:
         # detect objects
         # track objects
         results = model.track(frame, persist=True, classes=[0])
+        distanceMana.setFrame(frame)
+        distanceMana.setResults(results)
 
         # plot results
         # cv2.rectangle
         # cv2.putText
-        frame_ = results[0].plot()
+        frame = results[0].plot()
 
         # visualize
-        frame = cv2.resize(frame, (0, 0), fx=0.5, fy=0.5)
-        cv2.imshow("frame", frame_)
+        # frame = cv2.resize(frame, (0, 0), fx=0.5, fy=0.5)
+
+        cv2.imshow("frame", frame)
         if cv2.waitKey(0) == ord("q"):
             break
 
