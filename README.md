@@ -4,7 +4,6 @@
 
 ## Initial approach
 
-![Video](https://github.com/TungVietLe/Aerial-Cars/blob/main/export_video.mp4)
 
 ## Training
 
