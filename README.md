@@ -14,7 +14,7 @@
 
 - What I observed in the last few epochs is that the mAP50 and mAP50-95 barely improve. I ran a few more epoch after with (patience=4) and it stops prematurely, which means the model stops improving. However, at the same time, the `patience` value is really low to draw any meaningful conclusion.
 
-![result](https://github.com/TungVietLe/Aerial-Cars/blob/main/runs/detect/train4/results.png)
+![result](/runs/detect/train9/results.png)
 *last training result.*
 
 
