@@ -31,6 +31,12 @@ _last training result._
 
 - To get the distance, simply store the `id` of each car in a dictionary, then compare and update it every frame (or any duration of time).
 
+<foreignObject width="100%" height="100%">
+  <video width="1920" height="700" controls>
+    <source src="https://github.com/project-slot/Aerial-Cars/assets/99946449/9298131d-a7c2-4dc7-87bd-b5600d19bdeb.mp4" type="video/mp4">
+  </video>
+<foreignObject />
+
 https://github.com/project-slot/Aerial-Cars/assets/99946449/9298131d-a7c2-4dc7-87bd-b5600d19bdeb
 
 https://github.com/project-slot/Aerial-Cars/assets/99946449/808fe498-409b-4bfa-bc86-dc338e11c5e3
