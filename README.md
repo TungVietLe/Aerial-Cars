@@ -1,14 +1,8 @@
 # Aerial-Cars
 
-https://github.com/project-slot/Aerial-Cars/assets/99946449/885b4b8b-3095-4298-84ef-bdb0cc59bd96
+## Initial approach
 
-https://github.com/project-slot/Aerial-Cars/assets/99946449/fd564dcb-2909-4dec-8388-2af41a09bf81
-
-
-## Initial app
-
-
-roach
+Motion detection + Custom tracking based on distance
 
 ## Training
 
@@ -36,3 +30,7 @@ _last training result._
 - Based on these, we can see that: `speedX = distanceX * meter_per_pixel * fps` (each frame)
 
 - To get the distance, simply store the `id` of each car in a dictionary, then compare and update it every frame (or any duration of time).
+
+https://github.com/project-slot/Aerial-Cars/assets/99946449/9298131d-a7c2-4dc7-87bd-b5600d19bdeb
+
+https://github.com/project-slot/Aerial-Cars/assets/99946449/808fe498-409b-4bfa-bc86-dc338e11c5e3
