@@ -4,10 +4,6 @@ Object dection and speed estimation.
 
 ![export with id](/assets/gif/export_video_withID.gif)
 
-## Initial approach
-
-Motion detection + Custom tracking based on distance
-
 ## Training
 
 - As I have a relatively low-end computer, I only used `yolov8n`, which means there is wide room for improvement if I use a more powerful one, such as `yolov8l` or `yolov8x`.
@@ -38,3 +34,15 @@ _the model trained mostly on "far view" dataset, such that I tried to use it on 
 - To get the distance, simply store the `id` of each car in a dictionary, then compare and update it every frame (or any duration of time).
 
 ![export](/assets/gif/export_video.gif)
+
+## Initial approach (motion detection)
+
+My initial approach is to use Motion detection + Custom tracking based on distance, but later I decided to use `yolov8` for expansion potential and learning purposes.
+
+![tracking_tracking_in_roi](./assets/imgs/tracking_tracking_in_roi.png)
+
+_initial idea of tracking + assigning id in ROI (region of interest)_
+
+![roi](./assets/imgs/roi_and_detection.png)
+
+![roi](./assets/gif/export_video_motion_detect.gif)
