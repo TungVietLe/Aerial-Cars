@@ -4,7 +4,7 @@ from distance import DistanceManager
 
 
 # load yolov8 model
-model = YOLO("best_train4.pt")
+model = YOLO("best_train9.pt")
 distanceMana = DistanceManager()
 
 # load video
