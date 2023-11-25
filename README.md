@@ -46,3 +46,5 @@ _initial idea of tracking + assigning id in ROI (region of interest)_
 ![roi](./assets/imgs/roi_and_detection.png)
 
 ![roi](./assets/gif/export_video_motion_detect.gif)
+
+_results of the initial 'motion detection' approach_
